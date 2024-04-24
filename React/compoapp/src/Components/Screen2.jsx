@@ -1,0 +1,34 @@
+import ButtonUi from "./ButtonsUi";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import HeaderUi from "./HeaderUi";
+import InputGroupUi from "./InputGroupUi";
+import MessageUi from "./MessageUi";
+
+function BasicExamples() {
+  return (
+<>
+      <header className="text-center">
+        <HeaderUi />
+      </header>
+      <Container className="border mt-5 bg-white col-sm-11 col-lg-6 rounded p-4 shadow">
+        <Row>
+          <Col sm={12} md={8} lg={6}>
+            <InputGroupUi />
+          </Col>
+          <Col sm={12} md={8} lg={6}>
+            <MessageUi />
+          </Col>
+          <Col className="justify-content-center text-center">
+            <ButtonUi />
+          </Col>
+        </Row>
+      </Container>
+    
+    
+    </>
+  );
+}
+
+export default BasicExamples;
