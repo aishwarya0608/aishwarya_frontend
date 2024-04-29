@@ -19,7 +19,7 @@ const reducer = (state, action) => {
   }
 };
 
-const Ch = () => {
+const Todo = () => {
   const [input, setInput] = useState({});
   const [state, dispatch] = useReducer(reducer, []);
 
@@ -28,10 +28,10 @@ const Ch = () => {
       <h1>{JSON.stringify(state)}</h1>
       <input type="text" onChange={(e) => setInput({ ...input, id: e.target.value })} />
       <input type='text' onChange={(e) => setInput({ ...input, title: e.target.value })} />
-      <button onClick={() => dispatch({ type: "ADD", data: input })}>Add</button><br />
+      <button onClick={() => dispatch({ type: "ADD", data: input })}>Add</button>
 
       <input type="text" onChange={(e) => setInput({ id: e.target.value })} />
-      <button onClick={() => dispatch({ type: "DELETE", id: input.id })}>Delete</button><br />
+      <button onClick={() => dispatch({ type: "DELETE", id: input.id })}>Delete</button>
 
       <input type="text" onChange={(e) => setInput({ ...input, id: e.target.value })} />
       <input type='text' onChange={(e) => setInput({ ...input, title: e.target.value })} />
@@ -40,4 +40,4 @@ const Ch = () => {
   );
 };
 
-export default Ch;
+export default Todo;
